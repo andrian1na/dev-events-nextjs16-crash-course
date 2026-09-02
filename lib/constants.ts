@@ -1,0 +1,51 @@
+
+export const events = [
+    {
+        title: "KubeCon + CloudNativeCon North America 2026",
+        slug: "kubecon-cloudnativecon-north-america-2026",
+        date: "November 9–12, 2026",
+        time: "9:00 AM MST",
+        location: "Salt Lake City, Utah",
+        image: "/images/event1.png",
+    },
+    {
+        title: "Cloud Native AI + Inference Day",
+        slug: "cloud-native-ai-inference-day-2026",
+        date: "November 9, 2026",
+        time: "9:00 AM MST",
+        location: "Salt Lake City, Utah",
+        image: "/images/event2.png",
+    },
+    {
+        title: "DeveloperWeek 2027",
+        slug: "developerweek-2027",
+        date: "February 9–11, 2027",
+        time: "9:00 AM PST",
+        location: "Santa Clara, California",
+        image: "/images/event3.png",
+    },
+    {
+        title: "DeveloperWeek 2027 Hackathon",
+        slug: "developerweek-hackathon-2027",
+        date: "January 25–February 11, 2027",
+        time: "10:00 AM PST",
+        location: "Online + Santa Clara, California",
+        image: "/images/event4.png",
+    },
+    {
+        title: "React Advanced London 2026",
+        slug: "react-advanced-london-2026",
+        date: "October 23 & 26, 2026",
+        time: "9:00 AM BST",
+        location: "London, United Kingdom + Online",
+        image: "/images/event5.png",
+    },
+    {
+        title: "GitHub Universe 2026",
+        slug: "github-universe-2026",
+        date: "October 28–29, 2026",
+        time: "9:00 AM PDT",
+        location: "San Francisco, California + Online",
+        image: "/images/event6.png",
+    },
+] as const;
