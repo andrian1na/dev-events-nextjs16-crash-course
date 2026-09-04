@@ -1,4 +1,12 @@
+import dns from 'dns';
 import mongoose from 'mongoose';
+
+// Force Node's DNS resolver to use Google's public DNS. Some ISPs/mobile
+// carriers don't properly support the SRV record lookups required by
+// mongodb+srv:// URIs, causing "querySrv ECONNREFUSED" errors. Pointing
+// Node directly at a DNS server that handles SRV correctly fixes this
+// regardless of the machine's system-level DNS configuration.
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 // Define the connection cache type
 type MongooseCache = {
@@ -13,7 +21,6 @@ declare global {
 }
 
 const MONGODB_URI = process.env.MONGODB_URI;
-
 
 // Initialize the cache on the global object to persist across hot reloads in development
 let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
